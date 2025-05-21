@@ -3,9 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <title>Котел Янгола</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .hero-card {
+      border: 1px solid #ccc;
+      background: white;
+      border-radius: 8px;
+      padding: 10px;
+      margin: 10px;
+      width: 250px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .hero-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .hero-card img {
+      width: 100%;
+      border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Сайт памʼяті "Котел Янгола"</h1>
-  <div id="content">Тут буде список героїв</div>
+  <h1>Памʼять Героїв</h1>
+  <div id="heroes" class="hero-grid">Завантаження...</div>
+
+  <script>
+    async function loadHeroes() {
+      const sheetID = "17bXqEsmhGgxUcu6xFw5FanlMiF6JU-KP_4X1w4nSIcs";
+      const sheetName = "Лист1";
+      const url = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?tqx=out:json&sheet=${sheetName}`;
+
+      const res = await fetch(url);
+      const text = await res.text();
+      const json = JSON.parse(text.substr(47).slice(0, -2));
+      const rows = json.table.rows;
+
+      const container = document.getElementById("heroes");
+      container.innerHTML = "";
+
+      rows.forEach(row => {
+        const name = row.c[0]?.v || "";
+        const img = row.c[1]?.v || "";
+        const date = row.c[2]?.v || "";
+        const desc = row.c[3]?.v || "";
+        const city = row.c[4]?.v || "";
+
+        const card = document.createElement("div");
+        card.className = "hero-card";
+        card.innerHTML = `
+          <img src="${img}" alt="${name}">
+          <h3>${name}</h3>
+          <p><strong>Місто:</strong> ${city}</p>
+          <p><strong>Дата:</strong> ${date}</p>
+          <p>${desc}</p>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    loadHeroes();
+  </script>
 </body>
 </html>
