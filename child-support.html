@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Підтримка дітей Героїв</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/children.css"/>
+
+</head>
+<style>
+
+  .children-tab-content .column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* відстань між плитками */
+}
+
+.children-tab-content h5 {
+  margin: 0 0 5px 0;
+  font-size: 24px;
+}
+
+.children-tab-content p {
+  margin: 0;
+  background-color: #f5f5f5;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  line-height: 1.5;
+}
+
+/* Невелика адаптація, щоб плитки не злипалися */
+.children-tab-content .column > h5 + p {
+  margin-bottom: 10px;
+}
+
+</style>
+
+<body>
+
+    <header class="site-header">
+        <div class="logo">Крила Янголів</div>
+        <nav class="nav">
+          <a href="index.html">Головна</a>
+          <a href="psych-help.html">Психологічна допомога</a>
+          <a href="helps.html">Фінансово юридична</a>
+          <a href="child-support.html">Дітям Героїв</a>
+          <a href="memory.html">Пам'ять</a>
+        </nav>
+      </header>
+
+      <section class="children-support-section">
+        <h2>Підтримка дітей Героїв</h2>
+        <div class="children-tabs-container">
+          
+          <!-- Вкладки зліва -->
+          <nav class="children-tabs-nav">
+            <button class="children-tab-button active" data-tab="child-tab1">Освітні пільги</button>
+            <button class="children-tab-button" data-tab="child-tab2">Медичні пільги</button>
+            <button class="children-tab-button" data-tab="child-tab3">Соціальні пільги</button>
+            <button class="children-tab-button" data-tab="child-tab4">Інше</button>
+          </nav>
+      
+          <!-- Контент справа -->
+          <div class="children-tabs-content">
+            <!-- Освітні пільги -->
+            <div id="child-tab1" class="children-tab-content active">
+              <div class="tab-columns">
+                <div class="column">
+                  <h5>Безкоштовне навчання:</h5>
+                  <p>Діти мають право на безоплатне навчання у державних та комунальних закладах вищої та фахової 
+                    передвищої освіти. Це стосується як бюджетної, так і контрактної форми навчання, оскільки держава 
+                    компенсує вартість контракту через Міністерство у справах ветеранів.</p>
+                  <h5>Безкоштовне проживання в гуртожитках:</h5>
+                  <p>Студенти денної форми навчання мають право на безоплатне проживання в гуртожитках. </p>
+                  <h5>Позаконкурсний вступ:</h5>
+                  <p>Діти загиблих військових мають право на вступ до закладів освіти поза конкурсом.</p>
+                  <h5>Безкоштовне харчування:</h5>
+                  <p>Забезпечується безоплатне харчування у закладах освіти — від дитячих садків до коледжів включно.</p>
+                  <h5>Соціальні стипендії:</h5>
+                  <p>Діти загиблих військових можуть отримувати соціальні стипендії під час навчання. </p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Медичні пільги -->
+            <div id="child-tab2" class="children-tab-content">
+              <div class="tab-columns">
+                <div class="column">
+                  <h5>Безкоштовне медичне обслуговування:</h5>
+                  <p> Діти мають право на безоплатне отримання ліків за рецептами лікарів. </p>
+                  <h5>Оздоровлення та лікування:</h5>
+                  <p>Раз на рік — безкоштовне оздоровлення в санаторіях та таборах.</p>
+                  <h5>Першочергове обслуговування:</h5>
+                  <p>Забезпечується першочергове обслуговування в медичних закладах.</p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Соціальні пільги -->
+            <div id="child-tab3" class="children-tab-content">
+              <div class="tab-columns">
+                <div class="column">
+                  <h5>Пріоритетне зарахування:</h5>
+                  <p>Діти мають пріоритет при зарахуванні до дитячих садків і шкіл за місцем проживання.</p>
+                  <h5>Психологічна допомога:</h5>
+                  <p>Безкоштовна психологічна допомога для дітей загиблих військових.</p>
+                  <h5>Безкоштовний проїзд:</h5>
+                  <p>Діти мають право на безоплатний проїзд усіма видами міського пасажирського транспорту, а також на міських і приміських маршрутах.</p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Інше -->
+            <div id="child-tab4" class="children-tab-content">
+              <div class="tab-columns">
+                <div class="column">
+                  <h5>Програма «Кемп+»</h5>
+                  <p>
+                    Сімейна програма «Кемп+» від БФ «Голоси дітей».<br>
+                    «Кемп+» — це табір для родин загиблих військових. Під час нього відбуваються індивідуальні 
+                    та групові заняття з психологами, тілесна терапія, арттерапія, комунікативні тренінги, багато інших 
+                    практик і технік зцілення. Сім’ї потрапляють у середовище підтримки: фахівці створюють умови, за яких 
+                    можна безпечно проживати емоції, пов’язані з втратами, невизначеністю, страхом за своїх близьких тощо.</p>
+                  <h5>Проєкт «Простір РаДіти»</h5>
+                  <p>«Простір РаДіти» — це просвітницький і реабілітаційний проєкт, який створила група психотерапевтів, митців, 
+                    художників, філософів, музикантів. Простір започатковано як волонтерський проєкт з метою психологічної, фізичної та 
+                    емоційної роботи з дітьми, батьки яких творили Революцію гідності та боронять свободу України сьогодні.</p>
+                  <h5> Благодійний фонд «Діти Героїв»</h5>
+                  <p>БФ «Діти Героїв» допомагає дітям, які втратили одного чи обох батьків унаслідок повномасштабного 
+                    вторгнення РФ. Фонд надає фінансову та юридичну підтримку, сприяє освіті та розвитку дітей до їхнього 
+                    повноліття. Також надає психологічну допомогу.</p>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      
+
+
+      <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h1>Крила Янголів</h1>
+                    <p>Підтримка родин загиблих Героїв України. Разом ми сильні. Разом ми пам'ятаємо.</p>
+                </div>
+                <div class="footer-contacts">
+                    <h3>Контакти</h3>
+                    <ul>
+                        <li><a href="tel:+380769658890"><i class="fas fa-phone"></i> +38 (076) 965-88-90</a></li>
+                        <li><a href="mailto:help@kryla-yangoliv.com"><i class="fas fa-envelope"></i> help@kryla-yangoliv.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Павлоград, Дніпропетровська область</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Ми в соцмережах</h3>
+                    <div class="social-links">
+                        <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Крила Янголів. Всі права захищені.</p>
+            </div>
+        </div>
+      </footer>
+
+
+      <script src="script.js"></script>
+</body>
+</html>
