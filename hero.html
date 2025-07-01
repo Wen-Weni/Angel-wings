@@ -89,12 +89,14 @@
     const descElem = document.getElementById("heroFullDesc");
   
     if (hero) {
-      nameElem.textContent = hero.name || "Ім'я відсутнє";
-      document.title = hero.name || "Деталі Героя";
+      const name = hero.name || "Ім'я відсутнє";
+  
+      nameElem.textContent = name;
+      document.title = name;
   
       if (hero.img) {
         imgElem.src = hero.img;
-        imgElem.alt = hero.name || "Фото героя";
+        imgElem.alt = name;
       } else {
         imgElem.style.display = "none";
       }
@@ -109,6 +111,7 @@
       document.title = "Деталі Героя";
     }
   </script>
+  
   
 </body>
 </html>
