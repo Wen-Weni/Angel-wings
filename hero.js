@@ -16,25 +16,25 @@ async function loadHeroes() {
   const heroCards = [];
 
   rows.forEach(row => {
-    const name = row.c[1]?.v || "";                  // Ім’я
-    const imgId = row.c[2]?.v || "";                 // Зображення
+    const name = row.c[1]?.v || "";
+    const imgId = row.c[2]?.v || "";
     const img = `hero/${imgId}`;
 
-    let birthDate = row.c[3]?.v || "";               // Дата народження (D)
+    let birthDate = row.c[3]?.v || "";
     if (row.c[3]?.f) birthDate = row.c[3].f;
 
-    let deathDate = row.c[4]?.v || "";               // Дата загибелі (E)
+    let deathDate = row.c[4]?.v || "";
     if (row.c[4]?.f) deathDate = row.c[4].f;
 
-    const shortDesc = row.c[5]?.v || "";             // Короткий опис (F)
-    const fullDesc = row.c[6]?.v || "";              // Повний опис (G)
+    const shortDesc = row.c[5]?.v || "";
+    const fullDesc = row.c[6]?.v || "";
 
-    const params = new URLSearchParams({
+    const heroData = {
       name: name,
       img: img,
       date: `${birthDate} – ${deathDate}`,
       fullDesc: fullDesc
-    }).toString();
+    };
 
     const card = document.createElement("div");
     card.className = "hero-card";
@@ -43,14 +43,20 @@ async function loadHeroes() {
       <h3>${name}</h3>
       <p><strong></strong> ${birthDate} – ${deathDate}</p>
       <p>${shortDesc}</p>
-      <a href="hero.html?${params}" class="read-more-btn">Читати більше</a>
+      <a href="#" class="read-more-btn">Читати більше</a>
     `;
+
+    // Обробка кліку
+    card.querySelector(".read-more-btn").addEventListener("click", (e) => {
+      e.preventDefault();
+      localStorage.setItem("selectedHero", JSON.stringify(heroData));
+      window.location.href = "hero.html";
+    });
 
     container.appendChild(card);
     heroCards.push({ element: card, name: name.toLowerCase() });
   });
 
-  // Живий пошук
   if (searchInput) {
     searchInput.addEventListener("input", () => {
       const query = searchInput.value.toLowerCase().trim();
