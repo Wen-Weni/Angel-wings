@@ -4,71 +4,10 @@
   <meta charset="UTF-8" />
   <title>Деталі Героя</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/hero.css" />
   <style>
     body {
-      font-family: Roboto, sans-serif;
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-      background-color: #1b1b1b;
-      color: #f0f0f0;
-      position: relative;
       background-image: url("images/candle.png"), url("images/candle.png");
-      background-repeat: no-repeat, no-repeat;
-      background-position: left center, right center;
-      background-size: 15%, 15%;
-    }
-
-    a.back-btn {
-      display: inline-block;
-      margin-bottom: 20px;
-      padding: 10px 18px;
-      background-color: #222;
-      color: #fff;
-      text-decoration: none;
-      border: 1px solid #444;
-      border-radius: 6px;
-      transition: background-color 0.3s;
-    }
-
-    a.back-btn:hover {
-      background-color: #444;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-
-    img {
-      display: block;
-      margin: 0 auto 20px;
-      max-width: 300px;
-      border-radius: 10px;
-      box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
-    }
-
-    .hero-date {
-      text-align: center;
-      font-weight: bold;
-      margin-bottom: 20px;
-      font-size: 16px;
-      color: #ffcc99;
-    }
-
-    #heroFullDesc {
-      line-height: 1.7;
-      text-align: justify;
-      padding: 10px;
-      background-color: rgba(255, 255, 255, 0.05);
-      border-radius: 8px;
-    }
-
-    h2 {
-      color: rgb(199, 18, 18);
-      text-align: center;
-      font-size: 30px;
     }
   </style>
 </head>
@@ -80,38 +19,6 @@
   <p class="hero-date"><span id="heroDate"></span></p>
   <div id="heroFullDesc"></div>
 
-  <script>
-    const hero = JSON.parse(localStorage.getItem("selectedHero"));
-  
-    const nameElem = document.getElementById("heroName");
-    const imgElem = document.getElementById("heroImg");
-    const dateElem = document.getElementById("heroDate");
-    const descElem = document.getElementById("heroFullDesc");
-  
-    if (hero) {
-      const name = hero.name || "Ім'я відсутнє";
-  
-      nameElem.textContent = name;
-      document.title = name;
-  
-      if (hero.img) {
-        imgElem.src = hero.img;
-        imgElem.alt = name;
-      } else {
-        imgElem.style.display = "none";
-      }
-  
-      dateElem.textContent = hero.date || "Дата відсутня";
-      descElem.innerHTML = (hero.fullDesc || "Опис відсутній")
-        .split(/\n+/)
-        .map(line => `<p>${line.trim()}</p>`)
-        .join("");
-    } else {
-      nameElem.textContent = "Помилка: Дані не знайдено";
-      document.title = "Деталі Героя";
-    }
-  </script>
-  
-  
+  <script src="js/hero.js"></script>
 </body>
 </html>

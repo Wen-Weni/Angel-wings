@@ -1,0 +1,136 @@
+/* Базове оформлення секції */
+.children-support-section {
+  background-color: #fff;
+  padding: 30px 20px;
+  margin-top: 80px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.children-support-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #1b1f29;
+}
+
+/* Контейнер з табами */
+.children-tabs-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 50%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Ліва колонка з кнопками табів */
+.children-tabs-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 30%;
+}
+
+.children-tab-button {
+  background-color: #f7f7f7;
+  border: none;
+  border-left: 4px solid transparent;
+  padding: 12px 20px 12px 52px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  text-align: left;
+  background-repeat: no-repeat;
+  background-position: 16px center;
+  background-size: 24px 24px;
+  transition: all 0.3s ease;
+}
+
+.children-tab-button:hover {
+  background-color: #e0e0e0;
+}
+
+.children-tab-button.active {
+  background-color: #dbeaff;
+  border-left: 4px solid #1e88e5;
+  color: #0056b3;
+  font-weight: 700;
+}
+
+/* Контент праворуч */
+.children-tabs-content {
+  flex: 1;
+}
+
+.children-tab-content {
+  display: none;
+}
+
+.children-tab-content.active {
+  display: block;
+}
+
+/* Колонки контенту */
+.tab-columns,
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Заголовки всередині контенту */
+.children-tab-content h5 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1b1f29;
+}
+
+/* Тексти параграфів */
+.children-tab-content p {
+  margin: 0 0 20px;
+  font-size: 18px;
+  background-color: #f5f5f5;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Іконки для вкладок */
+.children-tab-button:nth-child(1) {
+  background-image: url('../images/edu.png');
+}
+.children-tab-button:nth-child(2) {
+  background-image: url('../images/med.png');
+}
+.children-tab-button:nth-child(3) {
+  background-image: url('../images/society.png');
+}
+.children-tab-button:nth-child(4) {
+  background-image: url('../images/help.png');
+}
+
+/* Адаптація для мобільних */
+@media (max-width: 768px) {
+  .children-tabs-container {
+    flex-direction: column;
+    max-width: 90%;
+  }
+
+  .children-tabs-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 100%;
+  }
+
+  .children-tab-button {
+    flex: 1 1 45%;
+    font-size: 20px;
+    padding: 12px 16px 12px 48px;
+  }
+}

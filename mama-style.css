@@ -1,0 +1,346 @@
+/* Hero Section з фоном */
+.hero-section {
+  position: relative;
+  height: 920px;
+  background: url("../images/index_first_pic.png") center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(27, 31, 41, 0.7);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 75px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  letter-spacing: 1.5px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 100px;
+  font-weight: 400;
+}
+
+.hero-buttons {
+margin-top: 28px;
+display: flex;
+flex-wrap: nowrap;       /* щоб не переносилися */
+justify-content: center;
+gap: 12px;                /* замість margin між кнопками */
+overflow-x: auto;         /* горизонтальний скролл, якщо не влізає */
+padding-bottom: 10px;     /* трохи простору внизу, якщо скролл з'явиться */
+}
+
+.hero-buttons button {
+background-color: transparent;
+border: 2px solid white;
+color: white;
+padding: 14px 24px;       /* зменшено для кращого вміщення */
+border-radius: 30px;
+font-size: 16px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s ease;
+white-space: nowrap;      /* не переносити текст */
+flex-shrink: 0;           /* не дозволяти кнопкам стискатися */
+}
+
+.hero-buttons button:hover {
+background-color: white;
+color: #1b1f29;
+}
+
+.mama-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif; 
+  }
+  
+  .mama-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .mama-column {
+    flex: 1;
+    min-width: 300px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .mama-column.left h3,
+  .mama-column.right h3 {
+    color: red;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .mama-column.left p,
+  .mama-column.right p,
+  .mama-column.center p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .mama-flag-logo {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+  }
+  
+  .mama-contact p {
+    margin: 8px 0;
+    color: #000;
+  }
+  
+  .mama-photo {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto 20px;
+  }
+  
+  .mama-poem h4 {
+    color: red;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .poem-author {
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .mama-logo {
+    width: 100%;
+    max-width: 250px;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  .mama-slogan {
+    text-align: center;
+    color: red;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  
+  .mama-column.center {
+    text-align: center;
+    .mama-column.center p {
+      line-height: 1.6 !important;
+      margin-bottom: 10px !important;
+  }
+  
+  }
+  
+  .mama-poem-title {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .poem-author {
+    font-weight: bold;
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .poem-image {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .mama-poem p {
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: pre-line;
+    margin: 0 auto 10px auto;
+    max-width: 300px;
+  }
+  
+  .poem-author {
+    text-align: right;
+    font-style: italic;
+    margin-bottom: 15px;
+  }
+  
+  .mama-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .mama-column {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  /* Вирівнювання центру для центральної колонки */
+  .mama-column.center {
+    text-align: center;
+  }
+  
+  /* Вірш */
+  .mama-poem p {
+    font-size: 14px;
+    line-height: 1.5;          /* комфортний міжрядковий інтервал */
+    white-space: pre-line;     /* щоб <br> працювали */
+    margin: 0 auto 10px auto;  /* знизу відступ 10px */
+    max-width: 300px;          /* обмежена ширина для зручності читання */
+    text-align: center;        /* щоб текст вірша був по центру */
+    word-wrap: break-word;
+  }
+  
+  /* Автор вірша */
+  .mama-poem p.poem-author {
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 15px;
+    font-style: italic;
+  }
+  
+  /* Картинка під віршем */
+  .poem-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+  }
+  
+  /* Ліва і права колонки, щоб не мали великих відступів */
+  .mama-column.left p,
+  .mama-column.right p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  .strong_mother{
+    margin-left: 50px;
+  }
+  
+  .strong_mother_text{
+    margin-left: 35px;
+  }
+  
+  .three-columns-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    font-family: sans-serif;
+  }
+  
+  .three-columns-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .three-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .image-row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .image-row img,
+  .three-column img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .image-row img {
+    flex: 1;
+  }
+  
+  
+  .three-columns-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    font-family: sans-serif;
+  }
+  
+  .three-columns-container {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .three-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .image-row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .image-row img {
+    flex: 1;
+    width: 100%;
+    max-width: 183px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  .three-column img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+  
+  .three-column p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .three-column strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }

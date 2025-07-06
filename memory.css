@@ -1,0 +1,96 @@
+.hero-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 0 20px;
+}
+
+.hero-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 300px; /* ЗБІЛЬШЕНО ширину */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 60px; /* під кнопку */
+  min-height: 500px; /* ЗБІЛЬШЕНО висоту */
+}
+
+.hero-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 6px 6px 0 0;
+}
+
+.hero-card h3 {
+  font-size: 20px; /* ЗБІЛЬШЕНО */
+  font-weight: 600;
+  margin: 14px 16px 8px;
+  color: #1b1f29;
+}
+
+.hero-card p {
+  font-size: 16px; /* ЗБІЛЬШЕНО */
+  color: #444;
+  margin: 0 16px 0;
+  line-height: 1.6;
+  white-space: normal;
+  overflow: visible;
+}
+
+.read-more-btn {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  padding: 10px 16px;
+  background-color: #38925d;
+  color: #fff !important;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #0056b3;
+}
+
+  h1 {
+
+    text-align: center;
+    padding: 10px;
+  }
+
+
+  .search-container {
+    text-align: center;
+    margin: 40px 0 20px;
+    }
+    
+    .search-input {
+    padding: 10px 16px;
+    font-size: 16px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: box-shadow 0.2s ease;
+    }
+    
+    .search-input:focus {
+    box-shadow: 0 0 6px rgba(0, 128, 255, 0.4);
+    }
+
+    /* Відступ знизу для блоку з героями */
+    .hero-grid {
+      margin-bottom: 60px;
+    }
