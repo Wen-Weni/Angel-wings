@@ -70,7 +70,7 @@
   }
   
 
-/* Адаптація для мобільних */
+/* дітям загиблих */
 @media (max-width: 768px) {
     .children-tabs-container {
       flex-direction: column;
@@ -118,80 +118,49 @@
   }
   
 
-  @media (max-width: 768px) {
-    .mama-section {
-      padding: 20px 10px;
-    }
-  
-    .mama-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-  
-    .mama-column {
-      width: 100%;
-      text-align: center;
-      padding: 10px 0;
-    }
-  
-    .mama-column.left p,
-    .mama-column.right p,
-    .mama-column.center p {
-      font-size: 14px;
-      padding: 0 10px;
-      line-height: 1.5;
-    }
-  
-    .mama-contact p {
-      font-size: 13px;
-      margin: 5px 0;
-    }
-  
-    .mama-flag-logo,
-    .mama-logo,
-    .poem-image {
-      width: 80%;
-      max-width: 300px;
-      height: auto;
-      margin: 10px auto;
-      display: block;
-    }
-  
-    .mama-poem p {
-      font-size: 14px;
-      max-width: 90%;
-      margin: 0 auto;
-    }
-  
-    .mama-poem-title {
-      font-size: 16px;
-      margin: 16px 0;
-    }
-  
-    .poem-author {
-      font-size: 13px;
-      text-align: center;
-      margin-top: 8px;
-    }
-  
-    .strong_mother {
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-  
-    .strong_mother_text {
-      font-size: 14px;
-      padding: 0 10px;
-      margin-bottom: 12px;
-    }
-  
-    .mama-slogan {
-      font-size: 15px;
-      line-height: 1.5;
-    }
+/* буклет головна */
+@media (max-width: 768px) {
+  .three-columns-container {
+    flex-direction: column;
+    gap: 40px; /* більший відступ між секціями */
+    padding: 0 10px;
   }
+
+  .three-column {
+    width: 100%;
+  }
+
+  .image-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image-row img {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .three-column img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto;
+  }
+
+  .three-column p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .three-column strong {
+    display: block;
+    font-size: 15px;
+  }
+
+  body {
+    overflow-x: hidden; /* гарантія — заборона горизонтального скролу */
+  }
+}
   
   
    /* На десктопі: зображення праворуч */
