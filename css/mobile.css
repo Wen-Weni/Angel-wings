@@ -47,17 +47,19 @@
     }
   
     .tab-button {
-      width: 100%;
+      display: flex;
+      justify-content: flex-start; /* вирівнює текст вліво */
+      align-items: center;
+      text-align: left;            /* текст також всередині кнопки ліворуч */
       padding: 14px 16px 14px 44px;
       font-size: 16px;
       background-position: 12px center;
       background-size: 24px 24px;
-      text-align: left;
       border-radius: 10px;
       border: 1px solid #ccc;
-      white-space: normal; /* Дозволяє тексту переноситись */
-      overflow: hidden;     /* Прибирає будь-які виходи за межі */
-      text-overflow: ellipsis;
+      width: 100%;
+      white-space: normal;
+      gap: 12px;
     }
   
     .tab-button.active {
