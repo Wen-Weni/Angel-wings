@@ -35,6 +35,37 @@
     }
   }
   
+ /* психологічна підтримка */
+  @media (max-width: 768px) {
+    .tabs-buttons {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px;
+      padding: 0 16px;
+      width: 100%;
+      overflow: visible;
+    }
+  
+    .tab-button {
+      width: 100%;
+      padding: 14px 16px 14px 44px;
+      font-size: 16px;
+      background-position: 12px center;
+      background-size: 24px 24px;
+      text-align: left;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      white-space: normal; /* Дозволяє тексту переноситись */
+      overflow: hidden;     /* Прибирає будь-які виходи за межі */
+      text-overflow: ellipsis;
+    }
+  
+    .tab-button.active {
+      border-color: #0056b3;
+      background-color: #e8f0ff;
+      color: #0056b3;
+    }
+  }
   
 
 /* Адаптація для мобільних */
