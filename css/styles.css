@@ -232,8 +232,10 @@ body {
   text-align: center;
 }
 
+/* Блок соцмереж */
 .footer-social {
   display: flex;
+  flex-direction: column; /* ✅ Вертикальне розташування */
   align-items: flex-start;
   gap: 10px;
   padding: 0 40px;
@@ -264,10 +266,33 @@ body {
   transform: translateY(-3px);
 }
 
-.footer-social h3 {
-  margin: 0;
+/* Посилання на анкету */
+.footer-form-link {
+  margin-top: 10px;
 }
 
+.footer-form-link .form-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-form-link .form-link i {
+  color: #ffd700;
+  font-size: 18px;
+}
+
+.footer-form-link .form-link:hover {
+  color: #ffd700;
+  transform: translateY(-2px);
+}
+
+/* Нижня частина футера */
 .footer-bottom {
   text-align: center;
   padding-top: 20px;
@@ -275,6 +300,7 @@ body {
   color: #6c757d;
   font-size: 0.9rem;
 }
+
 
 
 
@@ -302,32 +328,5 @@ body {
 
 }
 
-
-/*анкета*/
-.footer-form-link {
-  padding: 10px 40px;
-  margin-top: 10px;
-}
-
-.footer-form-link .form-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: white; /* Білий колір тексту */
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.footer-form-link .form-link i {
-  color: #ffd700; /* Іконка золотого кольору */
-  font-size: 18px;
-}
-
-.footer-form-link .form-link:hover {
-  color: #ffd700; /* Текст стає золотим при наведенні */
-  transform: translateY(-2px);
-}
 
 
