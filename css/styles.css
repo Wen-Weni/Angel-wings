@@ -275,9 +275,8 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: white;
+  color: #e9ecef;
   text-decoration: none;
-  font-size: 1rem;
   font-weight: 500;
   transition: color 0.3s ease, transform 0.2s ease;
 }
@@ -289,7 +288,7 @@ body {
 
 .footer-form-link .form-link:hover {
   color: #ffd700;
-  transform: translateY(-2px);
+  transform: translateX(4px);
 }
 
 /* Нижня частина футера */
@@ -327,6 +326,7 @@ body {
   box-shadow: 0 0 6px rgba(0, 128, 255, 0.4);
 
 }
+
 
 
 
